@@ -5,7 +5,7 @@ function App() {
 
 	const dispatch = useDispatch();
 	const myState = useSelector(function (s) {
-		return s.cash
+		return s.ca.cash;        // !!! уточнили редуктор из root
 	});
 
 
