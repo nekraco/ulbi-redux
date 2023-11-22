@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {useDispatch, useSelector} from "react-redux";
 
 function App() {
 
-  let ob = {
-    a: 111,
-    b: 222,
-  }
+  const dispatch = useDispatch();
+  const myState = useSelector(function (s) {
+    return s.cash
+  });
 
-  let ob2 = {...ob, c: (ob.a + ob.b), a: ob.a - ob.b}
-
-
-  const f = (ob) => {
-    let ar = [];
-    for(let key in ob) {
-      ar.push(key + ' : ' + ob[key]);
-    }
-    return ar
-  }
+  console.log(myState)
 
 
 
@@ -25,8 +17,8 @@ function App() {
     <div className="App">
         this-App
       <hr/>
-      {f(ob2).map(el => <div>{el}</div>)}
-    </div>
+
+      <div/></div>
   );
 }
 
